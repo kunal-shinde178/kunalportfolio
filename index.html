@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kunal Babaso Shinde | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg: #071426;
+    --card: #10243e;
+    --blue: #38bdf8;
+    --white: #ffffff;
+    --text: #cbd5e1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+
+header {
+    width: 100%;
+    padding: 18px 8%;
+    background: #0b1d35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px #0005;
+}
+
+.logo {
+    color: var(--blue);
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+/* HOME */
+
+.home {
+    min-height: 90vh;
+    padding: 70px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.home-content {
+    max-width: 650px;
+}
+
+.home-content h3 {
+    color: var(--blue);
+    font-size: 24px;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.home-content h2 {
+    color: var(--blue);
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.home-content p {
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.profile-img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 4px solid var(--blue);
+    box-shadow: 0 0 30px #38bdf855;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 25px;
+    background: var(--blue);
+    color: #071426;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+/* COMMON SECTION */
+
+section {
+    padding: 75px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    color: var(--blue);
+    margin-bottom: 40px;
+}
+
+/* ABOUT */
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    color: var(--text);
+    font-size: 17px;
+    line-height: 2;
+}
+
+/* SKILLS */
+
+.skills-container,
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: var(--card);
+    padding: 28px;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid #1e4165;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue);
+    box-shadow: 0 5px 25px #38bdf822;
+}
+
+.card h3 {
+    color: var(--blue);
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--text);
+}
+
+/* EDUCATION */
+
+.education-box {
+    max-width: 750px;
+    margin: auto;
+    background: var(--card);
+    padding: 30px;
+    border-radius: 14px;
+    border-left: 4px solid var(--blue);
+}
+
+.education-box h3 {
+    color: var(--blue);
+    margin-top: 12px;
+}
+
+.education-box p {
+    color: var(--text);
+}
+
+/* CONTACT */
+
+.contact-content {
+    text-align: center;
+}
+
+.contact-content p {
+    margin: 15px 0;
+    color: var(--text);
+}
+
+.contact-content a {
+    color: var(--blue);
+    text-decoration: none;
+    word-break: break-word;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0b1d35;
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 7%;
+    }
+
+    .home-content h1 {
+        font-size: 34px;
+    }
+
+    .home-content h2 {
+        font-size: 21px;
+    }
+
+    .profile-img {
+        width: 220px;
+        height: 280px;
+    }
+
+    section {
+        padding: 55px 7%;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+<div class="logo">KUNAL.</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<!-- HOME SECTION -->
+
+<section class="home" id="home">
+
+<div class="home-content">
+
+<h3>Hello, I'm</h3>
+
+<h1>Kunal Babaso Shinde</h1>
+
+<h2 id="typing">CST Student</h2>
+
+<p>
+I am a Computer Science and Technology student
+passionate about programming, technology,
+problem-solving and software development.
+
+I believe in continuous learning and improving
+my technical skills through practical projects.
+</p>
+
+<a href="resume.pdf" class="btn" download>
+Download Resume
+</a>
+
+<a href="https://github.com/kunal-shinde178"
+class="btn" target="_blank">
+GitHub Profile
+</a>
+
+</div>
+
+<img src="kunal.jpg"
+alt="Kunal Shinde"
+class="profile-img">
+
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about-content">
+
+<p>
+I am a First-Year Computer Science and Technology
+student at the Department of Technology,
+Shivaji University, Kolhapur.
+
+I am interested in programming, software development
+and learning new technologies. My goal is to become
+a skilled Software Developer and build useful
+technology solutions.
+</p>
+
+</div>
+
+</section>
+
+<!-- SKILLS SECTION -->
+
+<section id="skills">
+
+<h2 class="section-title">My Skills</h2>
+
+<div class="skills-container">
+
+<div class="card">
+<h3>C Programming</h3>
+<p>Programming fundamentals and problem-solving.</p>
+</div>
+
+<div class="card">
+<h3>Python</h3>
+<p>Learning Python programming.</p>
+</div>
+
+<div class="card">
+<h3>HTML & CSS</h3>
+<p>Website structure and web designing.</p>
+</div>
+
+<div class="card">
+<h3>Computer Knowledge</h3>
+<p>Basic computer knowledge.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS SECTION -->
+
+<section id="projects">
+
+<h2 class="section-title">My Projects</h2>
+
+<div class="projects-container">
+
+<div class="card">
+
+<h3>Student Management System</h3>
+
+<p>
+A Student Management System developed
+using the C programming language.
+</p>
+
+<a href="https://github.com/kunal-shinde178/Student-Management-System-C"
+target="_blank" class="btn">
+View Project
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Personal Portfolio Website</h3>
+
+<p>
+A responsive personal portfolio website
+created using HTML, CSS and JavaScript.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION SECTION -->
+
+<section id="education">
+
+<h2 class="section-title">Education</h2>
+
+<div class="education-box">
+
+<h3>B.E. Computer Science & Technology</h3>
+
+<p>Department of Technology</p>
+<p>Shivaji University, Kolhapur</p>
+<p>First Year | Expected Graduation: 2030</p>
+
+<br>
+
+<h3>HSC - Class 12</h3>
+<p>Maharashtra State Board - 65%</p>
+
+<br>
+
+<h3>SSC - Class 10</h3>
+<p>Maharashtra State Board - 91.20%</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="contact-content">
+
+<p>
+Email:
+<a href="mailto:shindekunal2030@gmail.com">
+shindekunal2030@gmail.com
+</a>
+</p>
+
+<p>
+GitHub:
+<a href="https://github.com/kunal-shinde178"
+target="_blank">
+Visit GitHub
+</a>
+</p>
+
+<p>
+LinkedIn:
+<a href="https://www.linkedin.com/in/kunal-s-9358553a2/"
+target="_blank">
+Visit LinkedIn
+</a>
+</p>
+
+<p>
+Instagram:
+<a href="https://www.instagram.com/kunal_shinde178_?dlrf=MWVxdms1c210ZXc0Yg==/"
+target="_blank">
+Visit Instagram
+</a>
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Kunal Babaso Shinde | All Rights Reserved.
+</p>
+
+<p>Designed with HTML, CSS & JavaScript</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const roles = [
+    "CST Student",
+    "Aspiring Software Developer",
+    "Programmer",
+    "Tech Enthusiast"
+];
+
+let index = 0;
+
+function changeText() {
+
+    document.getElementById("typing").innerText =
+    roles[index];
+
+    index = (index + 1) % roles.length;
+
+}
+
+changeText();
+
+setInterval(changeText, 2000);
+
+</script>
+
+</body>
+</html>
